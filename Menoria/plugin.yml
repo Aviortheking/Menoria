@@ -1,0 +1,42 @@
+name: Nemoria-Plugin
+version: 1.0.0
+main: net.DeltaWings.Nemoria.Main
+author: Aviortheking
+depend: [Vault, Jobs]
+commands:
+  playerinfos:
+    aliases: [pi, pinfos]
+permissions:
+  delta.pi.prefix.color.black:
+    default: false
+  delta.pi.prefix.color.dark_blue:
+    default: false
+  delta.pi.prefix.color.dark_aqua:
+    default: false
+  delta.pi.prefix.color.dark_red:
+    default: false
+  delta.pi.prefix.color.dark_purple:
+    default: false
+  delta.pi.prefix.color.gold:
+    default: false
+  delta.pi.prefix.color.gray:
+    default: false
+  delta.pi.prefix.color.dark_gray:
+    default: false
+  delta.pi.prefix.color.blue:
+    default: false
+  delta.pi.prefix.color.green:
+    default: false
+  delta.pi.prefix.color.aqua:
+    default: false
+  delta.pi.prefix.color.red:
+    default: false
+  delta.pi.prefix.color.light_purple:
+    default: false
+  delta.pi.prefix.color.yellow:
+    default: false
+  delta.pi.prefix.color.white:
+    default: false
+  delta.pi.color:
+    default: false
+
