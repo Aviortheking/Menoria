@@ -17,10 +17,10 @@ public class ChatListener implements Listener {
 	@EventHandler(priority=EventPriority.HIGHEST)
 	public void onPlayerChat(AsyncPlayerChatEvent e){
 		String msg = MinecraftToJSON.main(e.getMessage(), e.getPlayer());
-		System.out.println(msg);
 		e.setCancelled(true);
 		IChatBaseComponent link = ChatSerializer.a(msg);
 		PacketPlayOutChat packet = new PacketPlayOutChat(link);
 		((CraftPlayer) e.getPlayer()).getHandle().playerConnection.sendPacket(packet);
+		System.out.println(e.getPlayer().getName()+" > "+e.getMessage());
 	}
 }

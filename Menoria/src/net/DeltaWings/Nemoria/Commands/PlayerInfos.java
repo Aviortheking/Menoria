@@ -23,10 +23,10 @@ public class PlayerInfos implements CommandExecutor {
 				if(args.length == 1){
 					for(Player player : Bukkit.getServer().getOnlinePlayers()){
 						if(player.getName().equalsIgnoreCase(args[0])){
-							p.sendMessage("§bNom: §6"+player.getName()+"§b\n Vie: §6"+player.getHealth()+"§b\nNiveau: §6"+player.getLevel()+"§b\nExperience: §6"+player.getExp()+"§b\nDollars: §6"+Main.eco.getBalance(player));
+							p.sendMessage("Â§bNom: Â§6"+player.getName()+"Â§b\n Vie: Â§6"+player.getHealth()+"Â§b\nNiveau: Â§6"+player.getLevel()+"Â§b\nEcus: Â§6"+Main.eco.getBalance(player));
 							List<JobProgression> jobs = Jobs.getPlayerManager().getJobsPlayer(player).getJobProgression();
 							for (JobProgression OneJob : jobs) {
-								p.sendMessage("§bJob actuel: §6"+OneJob.getJob().getName()+ "§b Niveau: §6"+OneJob.getLevel()+"§b Experience: §6"+OneJob.getExperience()+"§b/§6"+OneJob.getMaxExperience());
+								p.sendMessage("Â§bJob actuel: Â§6"+OneJob.getJob().getName()+ "Â§b Niveau: Â§6"+OneJob.getLevel()+"Â§b Experience: Â§6"+OneJob.getExperience()+"Â§b/Â§6"+OneJob.getMaxExperience());
 							}
 						}
 						
@@ -38,7 +38,7 @@ public class PlayerInfos implements CommandExecutor {
 		//get money 
 		//get job
 		//get job level
-		//say  Comtniark et de métier mineur niveaux 13 posséde 50 Crédit et actuellement lv 50(xp du joueur) vie actuel : 10 coeurs
+		//say  Comtniark et de mÂ§tier mineur niveaux 13 possÂ§de 50 CrÂ§dit et actuellement lv 50(xp du joueur) vie actuel : 10 coeurs
 		
 		}
 		return false;

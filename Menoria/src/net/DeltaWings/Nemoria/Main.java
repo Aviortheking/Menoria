@@ -58,6 +58,11 @@ public class Main extends JavaPlugin implements Listener{
 
 /* 
  * OBJECTIF:
- * quand le joueur se trouve a x coordonné dans x monde
- * ouvrir un chest
+ * un systeme de kits
+ * pour les kits ils peuvent Ãªtre des commandes et des items ?
+ * les gamemode juste les minimizer /gmc /gma /gms /gmsp
+ * le tpa
+ * les warps
+ * ./enchantment /feed /xp /fly /give /god /hat /heal /kit /afk /msg /powertool /spawner /spawnmob /ban /banip /broadcast /enderchest /invsee /kick /kill /mute /tempban /vanish /setspawn /spawn /back /home /sethome /delhome /setwarp /warp /delwarp /tp /tpa /tphere /tpaccept /tpdeny
+ * ./item /repair /remove /clearinventory / ignore /suicide /kickall /tpaall /tpall /tpahere
  */
