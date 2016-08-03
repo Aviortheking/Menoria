@@ -75,7 +75,7 @@ public class MinecraftToJSON {
 			if( yolo == true){
 				if(special(parts[a]) != "none" || colors(parts[a]) != "none"){
 					result.add("{\"text\":\""+one+"\""+color+special[0]+special[1]+special[2]+special[3]+special[4]+"}");
-					if(special(parts[a]) != "none" && player.hasPermission("delta.pi.color")){
+					if(special(parts[a]) != "none" && player.hasPermission("menoria.color")){
 						if(special(parts[a]) == "bold") special[0] = ",\"bold\":true";
 						if(special(parts[a]) == "italic") special[1] = ",\"italic\":true";
 						if(special(parts[a]) == "strikethrough") special[2] = ",\"strikethrough\":true";
@@ -111,7 +111,7 @@ public class MinecraftToJSON {
 			one = "";
 		}
 		String pcolor = "white";
-		String perm = "delta.pi.prefix.color.";
+		String perm = "menoria.prefix.color.";
 		if(player.hasPermission(perm+"black")) pcolor = "black";
 		else if(player.hasPermission(perm+"dark_blue")) pcolor = "dark_blue";
 		else if(player.hasPermission(perm+"dark_green")) pcolor = "dark_green";

@@ -13,7 +13,6 @@ import com.gamingmesh.jobs.container.JobProgression;
 
 import net.DeltaWings.Nemoria.Main;
 
-
 public class PlayerInfos implements CommandExecutor {
 
 	@Override

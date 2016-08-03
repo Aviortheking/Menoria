@@ -1,4 +1,4 @@
-name: Nemoria-Plugin
+name: Menoria-Plugin
 version: 1.0.0
 main: net.DeltaWings.Nemoria.Main
 author: Aviortheking
@@ -6,6 +6,10 @@ depend: [Vault, Jobs]
 commands:
   playerinfos:
     aliases: [pi, pinfos]
+  settp:
+    aliases: [sttp]
+  deltp:
+    aliases: [dltp]
 permissions:
   delta.pi.prefix.color.black:
     default: false

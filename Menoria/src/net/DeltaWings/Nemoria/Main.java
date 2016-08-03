@@ -1,11 +1,15 @@
 package net.DeltaWings.Nemoria;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import net.DeltaWings.Nemoria.Commands.DelTP;
 import net.DeltaWings.Nemoria.Commands.PlayerInfos;
+import net.DeltaWings.Nemoria.Commands.SetTP;
 import net.DeltaWings.Nemoria.Listeners.ChatListener;
+import net.DeltaWings.Nemoria.Listeners.PlayerPositionListener;
 import net.milkbowl.vault.economy.Economy;
 
 public class Main extends JavaPlugin implements Listener{
@@ -14,25 +18,31 @@ public class Main extends JavaPlugin implements Listener{
 	public static Main getInstance() {
 		return instance;
 	}
+
+	public static Main main;
 	public static Economy eco = null;
 	
+	@SuppressWarnings("deprecation")
 	public void onEnable(){
 		//creation de l'instance
 		instance = this;
+		main = Main.getInstance();
 		setupEconomy();
 		//create chatlistener
 		getServer().getPluginManager().registerEvents(new ChatListener(), this);
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new PlayerPositionListener(),20,20);
 		getCommand("PlayerInfos").setExecutor(new PlayerInfos());
-		
+		getCommand("SetTP").setExecutor(new SetTP());
+		getCommand("DelTP").setExecutor(new DelTP());
+		saveDefaultConfig();
 		//plugin enabled
-		System.out.println("[Player Imformation]Plugin enabled");
+		System.out.println("[Menoria]Plugin enabled");
 	}
 	
 	public void onDisable(){
 		
-		
 		//plugin disabled
-		System.out.println("[Player Imformation]Plugin disabled");
+		System.out.println("[Menoria]Plugin disabled");
 	}
 	private boolean setupEconomy()
     {
