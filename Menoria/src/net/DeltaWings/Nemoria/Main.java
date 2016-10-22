@@ -1,5 +1,6 @@
 package net.DeltaWings.Nemoria;
 
+import net.DeltaWings.Nemoria.Listeners.PhysicListener;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -34,6 +35,7 @@ public class Main extends JavaPlugin implements Listener{
 		getCommand("PlayerInfos").setExecutor(new PlayerInfos());
 		getCommand("SetTP").setExecutor(new SetTP());
 		getCommand("DelTP").setExecutor(new DelTP());
+		getServer().getPluginManager().registerEvents(new PhysicListener(), this);
 		saveDefaultConfig();
 		//plugin enabled
 		System.out.println("[Menoria]Plugin enabled");
