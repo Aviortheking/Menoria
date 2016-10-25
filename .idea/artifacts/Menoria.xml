@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Menoria">
+    <output-path>$PROJECT_DIR$/out/artifacts/Menoria</output-path>
+    <root id="archive" name="Menoria.jar">
+      <element id="module-output" name="Menoria" />
+      <element id="file-copy" path="$PROJECT_DIR$/Menoria/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/Menoria/plugin.yml" />
+    </root>
+  </artifact>
+</component>

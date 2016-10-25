@@ -14,7 +14,8 @@ import net.minecraft.server.v1_10_R1.PacketPlayOutChat;
 
 public class ChatListener implements Listener {
 
-	@EventHandler(priority=EventPriority.HIGHEST)
+	//reste chat
+	/**@EventHandler(priority=EventPriority.HIGHEST)
 	public void onPlayerChat(AsyncPlayerChatEvent e){
 		String msg = MinecraftToJSON.main(e.getMessage(), e.getPlayer());
 		e.setCancelled(true);
@@ -22,5 +23,5 @@ public class ChatListener implements Listener {
 		PacketPlayOutChat packet = new PacketPlayOutChat(link);
 		((CraftPlayer) e.getPlayer()).getHandle().playerConnection.sendPacket(packet);
 		System.out.println(e.getPlayer().getName()+" > "+e.getMessage());
-	}
+	}**/
 }

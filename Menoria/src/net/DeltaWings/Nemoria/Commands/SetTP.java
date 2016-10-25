@@ -25,11 +25,12 @@ public class SetTP implements CommandExecutor {
 					Files.getConfig().set("teleporteurs."+args[0]+".x", p.getLocation().getBlockX());
 					Files.getConfig().set("teleporteurs."+args[0]+".y", p.getLocation().getBlockY());
 					Files.getConfig().set("teleporteurs."+args[0]+".z", p.getLocation().getBlockZ());
-					p.sendMessage("Teleporteur cr�e");
+					Files.getConfig().set("teleporteurs."+args[0]+".command", "bs");
+					p.sendMessage("§bMenoria §> §cTeleporteur crée");
 				}
 			}
 		}
-		Main.getInstance().saveConfig();
+		Files.saveConfig();
 		return false;
 	}
 

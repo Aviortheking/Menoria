@@ -29,12 +29,13 @@ public class DelTP implements CommandExecutor {
 					Files.getConfig().set("teleporteurs."+args[0]+".x", "");
 					Files.getConfig().set("teleporteurs."+args[0]+".y", "");
 					Files.getConfig().set("teleporteurs."+args[0]+".z", "");
+                    Files.getConfig().set("teleporteurs."+args[0]+".command", "");
 					Files.getConfig().set("teleporteurs."+args[0], "");
 					p.sendMessage("teleporteur detruis !");
 				}
 			}
 		}
-		Main.getInstance().saveConfig();
+		Files.saveConfig();
 		return false;
 	}
 

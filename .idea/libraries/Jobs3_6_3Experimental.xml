@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Jobs3.6.3Experimental">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Menoria/lib/Jobs3.6.3Experimental.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Menoria/lib/spigot-1.10.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Menoria/lib/Vault.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/Menoria/lib/spigot-1.10.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>

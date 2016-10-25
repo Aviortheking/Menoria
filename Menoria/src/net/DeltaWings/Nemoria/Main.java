@@ -9,7 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.DeltaWings.Nemoria.Commands.DelTP;
 import net.DeltaWings.Nemoria.Commands.PlayerInfos;
 import net.DeltaWings.Nemoria.Commands.SetTP;
-import net.DeltaWings.Nemoria.Listeners.ChatListener;
 import net.DeltaWings.Nemoria.Listeners.PlayerPositionListener;
 import net.milkbowl.vault.economy.Economy;
 
@@ -28,9 +27,8 @@ public class Main extends JavaPlugin implements Listener{
 		//creation de l'instance
 		instance = this;
 		main = Main.getInstance();
-		setupEconomy();
 		//create chatlistener
-		getServer().getPluginManager().registerEvents(new ChatListener(), this);
+		/**getServer().getPluginManager().registerEvents(new ChatListener(), this);**/
 		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new PlayerPositionListener(),20,20);
 		getCommand("PlayerInfos").setExecutor(new PlayerInfos());
 		getCommand("SetTP").setExecutor(new SetTP());
@@ -46,7 +44,8 @@ public class Main extends JavaPlugin implements Listener{
 		//plugin disabled
 		System.out.println("[Menoria]Plugin disabled");
 	}
-	private boolean setupEconomy()
+	//reste chat
+	/**private boolean setupEconomy()
     {
         RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
         if (economyProvider != null) {
@@ -54,7 +53,7 @@ public class Main extends JavaPlugin implements Listener{
         }
 
         return (eco != null);
-    }
+    }**/
 }
 
 

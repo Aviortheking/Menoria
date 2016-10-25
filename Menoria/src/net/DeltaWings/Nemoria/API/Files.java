@@ -6,16 +6,14 @@ import net.DeltaWings.Nemoria.Main;
 
 public class Files {
 
+	private static Main main = Main.getInstance();
 	public static FileConfiguration getConfig(){
-		return Main.getInstance().getConfig();
+		return main.getConfig();
 		
 	}
-	
-	public static void saveFiles(){
-		Main.getInstance().saveConfig();
+
+	public static void saveConfig() {
+		main.saveConfig();
 	}
-	
-	public void yolo(){
-		
-	}
+
 }
